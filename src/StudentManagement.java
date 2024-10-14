@@ -7,11 +7,11 @@ import java.util.Queue;         // Importing the Queue interface for managing FI
 public class StudentManagement {
     public Object loadExampleData;
     // List to hold the students' information
-    private List<Student> students;
+    private final List<Student> students;
     // Stack to manage recent student operations for undo functionality
-    private Stack<Student> operationStack;
+    private final Stack<Student> operationStack;
     // Queue to manage student operations in FIFO order
-    private Queue<Student> operationQueue;
+    private final Queue<Student> operationQueue;
 
     // Constructor to initialize the students list and the operation structures
     public StudentManagement() {

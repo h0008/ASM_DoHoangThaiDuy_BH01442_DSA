@@ -1,6 +1,6 @@
 class Student {
-    private String studentId;
-    private String studentName;
+    private final String studentId;
+    private final String studentName;
     private double marks;
     private String rank;
 
