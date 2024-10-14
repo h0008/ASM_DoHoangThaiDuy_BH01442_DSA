@@ -5,7 +5,7 @@ public class Main {
         StudentManagement stuM = new StudentManagement();
         Scanner scanner = new Scanner(System.in);
         int choice;
-// Multiple choices
+
         do {
             System.out.println("Welcome to the Student Management System!");
             System.out.println("1. Add a new student");
@@ -14,6 +14,7 @@ public class Main {
             System.out.println("4. Display all of the students");
             System.out.println("5. Search up a student by ID");
             System.out.println("6. Sort students by marks in descending order");
+            System.out.println("7. Load example data");
             System.out.println("0. Quit the program");
             System.out.print("Input in a number then press ENTER: ");
             choice = scanner.nextInt();
@@ -70,16 +71,23 @@ public class Main {
                 case 6:
                     // Sort students by marks
                     stuM.sortStudents();
-                    System.out.println("Here is the student list sort by descending order:");
+                    System.out.println("Here is the student list sorted by descending order:");
+                    stuM.displayStudents(); // Display sorted list
+                    break;
+
+                case 7:
+                    // Load example data
+                    StudentManagement.loadExampleData(stuM);
+                    System.out.println("Example data loaded successfully!");
                     break;
 
                 case 0:
                     // Exit
-                    System.out.println("Quiting...");
+                    System.out.println("Quitting...");
                     break;
 
                 default:
-                    System.out.println("Please input in a valid WHOLE number from 0 to 6.");
+                    System.out.println("Please input a valid WHOLE number from 0 to 7.");
                     break;
             }
         } while (choice != 0);

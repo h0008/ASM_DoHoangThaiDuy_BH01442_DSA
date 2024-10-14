@@ -5,6 +5,7 @@ import java.util.LinkedList;    // Importing the LinkedList class for Queue impl
 import java.util.Queue;         // Importing the Queue interface for managing FIFO operations
 
 public class StudentManagement {
+    public Object loadExampleData;
     // List to hold the students' information
     private List<Student> students;
     // Stack to manage recent student operations for undo functionality
@@ -21,6 +22,7 @@ public class StudentManagement {
 
     /**
      * Add a student to the list
+     *
      * @param id    The student's ID
      * @param name  The student's full name
      * @param marks The student's marks
@@ -34,8 +36,9 @@ public class StudentManagement {
 
     /**
      * Edit the marks of an existing student
-     * @param id        The student's ID to find the student
-     * @param newMarks  The new marks to assign to the student
+     *
+     * @param id       The student's ID to find the student
+     * @param newMarks The new marks to assign to the student
      */
     public void editStudent(String id, float newMarks) {
         for (Student student : students) {
@@ -50,6 +53,7 @@ public class StudentManagement {
 
     /**
      * Delete a student from the list by their ID
+     *
      * @param id The student's ID to find the student for deletion
      */
     public void deleteStudent(String id) {
@@ -86,6 +90,7 @@ public class StudentManagement {
 
     /**
      * Search for a student by their ID
+     *
      * @param id The student's ID to search for
      * @return The student object if found, or null if not found
      */
@@ -111,6 +116,7 @@ public class StudentManagement {
 
     /**
      * Undo the last operation using the stack
+     *
      * @return The student that was last added or edited, or null if no operation can be undone
      */
     public Student undoLastOperation() {
@@ -129,5 +135,13 @@ public class StudentManagement {
             // Here you can add logic to process the student
             System.out.println("Processing student: " + student);
         }
+    }
+
+    public static void loadExampleData(StudentManagement stuM) {
+        stuM.addStudent("BH00001", "Duy", 8.5F);
+        stuM.addStudent("BH00002", "Huy", 6.0F);
+        stuM.addStudent("BH00003", "Quang", 9.2F);
+        stuM.addStudent("BH00004", "Hoang", 7.4F);
+        stuM.addStudent("BH00005", "Hieu", 5.5F);
     }
 }
