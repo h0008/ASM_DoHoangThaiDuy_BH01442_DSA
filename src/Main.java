@@ -75,7 +75,7 @@ public class Main {
 
                 case 0:
                     // Exit
-                    System.out.println("Quiting the program...");
+                    System.out.println("Quiting in progress...");
                     break;
 
                 default:
