@@ -79,8 +79,8 @@ public class StudentManagement {
 //Display all the students
 
     public void displayStudents() {
-        for (Student student : students) {
-            System.out.println(student);
+        for (int i = students.size() - 1; i >= 0; i--) {
+            System.out.println(students.get(i));
         }
     }
 
