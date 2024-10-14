@@ -45,7 +45,7 @@ public class Main {
 
                 case 3:
                     // Delete student
-                    System.out.print("Enter Student ID to Delete: ");
+                    System.out.print("Enter Student ID to Delete (BH000xx): ");
                     id = scanner.nextLine();
                     stuM.deleteStudent(id);
                     System.out.println("Student deleted successfully!");
