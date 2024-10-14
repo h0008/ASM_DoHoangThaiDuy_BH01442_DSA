@@ -33,7 +33,6 @@ class Student {
         this.rank = assignRank(marks);
     }
 
-    // Method to represent the student details as a String
     public String toString() {
         return "ID: " + studentId + ", Name: " + studentName + ", Marks: " + marks + ", Rank: " + rank;
     }

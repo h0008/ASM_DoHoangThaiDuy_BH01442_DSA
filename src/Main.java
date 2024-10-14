@@ -72,7 +72,7 @@ public class Main {
                     // Sort students by marks
                     stuM.sortStudents();
                     System.out.println("Here is the student list sorted by descending order:");
-                    stuM.displayStudents(); // Display sorted list
+                    stuM.displayStudents();
                     break;
 
                 case 7:
